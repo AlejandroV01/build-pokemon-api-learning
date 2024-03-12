@@ -17,7 +17,7 @@ const PokemonCard = ({ hp, id, name, types, attack, defense, speed }: IPokemonCa
         <div className='border border-black rounded-lg p-2'>HP {hp}</div>
         <div className='border border-black rounded-lg p-2'>#{id}</div>
       </div>
-      <span className='w-full'>{name}</span>
+      <span className='w-full text-center'>{name}</span>
       <div className='flex gap-2 w-full justify-center'>
         {types.map(type => {
           return (

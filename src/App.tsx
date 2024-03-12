@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './App.css'
 import PokemonCard from './components/PokemonCard'
 
 function App() {
@@ -53,9 +52,8 @@ function App() {
   }
 
   return (
-    <>
-      <h1>App</h1>
-      <button className='bg-red-500 p-2' onClick={getRandomPokemon}>
+    <div className='flex flex-col items-center gap-10 mt-10'>
+      <button className='bg-red-500 p-2 rounded-lg font-bold' onClick={getRandomPokemon}>
         Generate Random Pokemon
       </button>
       {pokemon && (
@@ -69,7 +67,7 @@ function App() {
           types={pokemon.type2 ? [pokemon.type1, pokemon.type2] : [pokemon.type1]}
         />
       )}
-    </>
+    </div>
   )
 }
 
